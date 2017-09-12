@@ -36,15 +36,15 @@
         {{file-browser
             selectedFile=model
             display=displays
-            userId=userId
+            user=model.user
             openFile=(action 'openFile')
         }}
         {{#if isAdmin}}
         <div class="clearfix">
             <label>Tags:</label>
-            {{tags-widget 
-                addATag=(action 'addTag') 
-                removeATag=(action 'removeTag') 
+            {{tags-widget
+                addATag=(action 'addTag')
+                removeATag=(action 'removeTag')
                 tags=fileTags
             }}
         </div>

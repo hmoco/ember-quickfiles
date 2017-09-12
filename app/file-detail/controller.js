@@ -4,9 +4,6 @@ import permissions from 'ember-osf/const/permissions';
 
 export default Ember.Controller.extend({
     displays: Ember.A([]),
-    userId: Ember.computed('model', function() {
-        return this.get('model.user.id');
-    }),
     isAdmin: Ember.computed('model', function() {
         // True if the current user has admin permissions for the node that contains the preprint
         //return (this.get('model.user.currentUserPermissions') || []).includes(permissions.ADMIN);
